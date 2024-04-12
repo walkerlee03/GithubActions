@@ -31,6 +31,7 @@ namespace GithubActionsLab
         }
 
         // Implement 3 tests per operation, following a similar pattern as above
+        [Test]
         public void Subtract_Valid_Lee()
         {
             Assert.AreEqual(5, Program.Subtract("7", "2"));
@@ -38,6 +39,7 @@ namespace GithubActionsLab
             Assert.AreEqual(-4, Program.Subtract("0", "6"));
         }
 
+        [Test]
         public void Subtract_Invalid_Lee()
         {
             Assert.Throws<FormatException>(() => Program.Subtract("b", "2"));
@@ -45,6 +47,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Subtract("a", "b"));
         }
 
+        [Test]
         public void Subtract_Null_Lee()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, "2"));
@@ -52,6 +55,7 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, null));
         }
 
+        [Test]
         public void Multiply_Valid_Lee()
         {
             Assert.AreEqual(25, Program.Multiply("5", "5"));
@@ -59,6 +63,7 @@ namespace GithubActionsLab
             Assert.AreEqual(5, Program.Multiply("1", "5"));
         }
 
+        [Test]
         public void Multiply_Invalid_Lee()
         {
             Assert.Throws<FormatException>(() => Program.Multiply("g", "6"));
@@ -66,6 +71,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Multiply("f", "x"));
         }
 
+        [Test]
         public void Multiply_Null_Lee()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, "9"));
@@ -73,6 +79,7 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, null));
         }
 
+        [Test]
         public void Divide_Valid_Lee()
         {
             Assert.AreEqual(1, Program.Divide("9", "9"));
@@ -80,6 +87,7 @@ namespace GithubActionsLab
             Assert.AreEqual(9, Program.Divide("9", "1"));
         }
 
+        [Test]
         public void Divide_Invalid_Lee()
         {
             Assert.Throws<FormatException>(() => Program.Divide("j", "4"));
@@ -87,6 +95,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Divide("w", "l"));
         }
 
+        [Test]
         public void Divide_Null_Lee()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Divide("5", null));
@@ -94,6 +103,7 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Divide(null, null));
         }
 
+        [Test]
         public void Exponentiate_Valid_Lee()
         {
             Assert.AreEqual(4, Program.Power("2", "2"));
@@ -101,6 +111,7 @@ namespace GithubActionsLab
             Assert.AreEqual(81, Program.Power("9", "2"));
         }
 
+        [Test]
         public void Exponentiate_Invalid_Lee()
         {
             Assert.Throws<FormatException>(() => Program.Power("t", "3"));
@@ -108,6 +119,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Power("r", "m"));
         }
 
+        [Test]
         public void Exponentiate_Null_Lee()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, "8"));
